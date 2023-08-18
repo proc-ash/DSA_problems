@@ -7,4 +7,14 @@
 # 1 2 1 
 # 1 3 3 1 
 # 1 4 6 4 1
+def pascalTriangle(row, col):
+    row -= 1
+    col -= 1
+    result = 1
+    for i in range(col):
+        result *= row-i
+        result /= i+1
+    return int(result)
 
+if __name__=='__main__':
+    print(pascalTriangle(40,4))
